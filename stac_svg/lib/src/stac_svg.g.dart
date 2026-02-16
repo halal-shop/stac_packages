@@ -8,45 +8,39 @@ part of 'stac_svg.dart';
 
 StacSvg _$StacSvgFromJson(Map<String, dynamic> json) => StacSvg(
   src: json['src'] as String,
-  sourceType:
-      $enumDecodeNullable(_$StacSvgSourceTypeEnumMap, json['sourceType']) ??
-      StacSvgSourceType.string,
+  sourceType: $enumDecodeNullable(
+    _$StacSvgSourceTypeEnumMap,
+    json['sourceType'],
+  ),
   width: (json['width'] as num?)?.toDouble(),
   height: (json['height'] as num?)?.toDouble(),
-  fit:
-      $enumDecodeNullable(_$StacBoxFitEnumMap, json['fit']) ??
-      StacBoxFit.contain,
-  alignment:
-      $enumDecodeNullable(_$StacAlignmentEnumMap, json['alignment']) ??
-      StacAlignment.center,
-  matchTextDirection: json['matchTextDirection'] as bool? ?? false,
-  allowDrawingOutsideViewBox:
-      json['allowDrawingOutsideViewBox'] as bool? ?? false,
+  fit: $enumDecodeNullable(_$StacBoxFitEnumMap, json['fit']),
+  alignment: $enumDecodeNullable(_$StacAlignmentEnumMap, json['alignment']),
+  matchTextDirection: json['matchTextDirection'] as bool?,
+  allowDrawingOutsideViewBox: json['allowDrawingOutsideViewBox'] as bool?,
   placeholder: json['placeholder'] == null
       ? null
       : StacWidget.fromJson(json['placeholder'] as Map<String, dynamic>),
   semanticsLabel: json['semanticsLabel'] as String?,
-  excludeFromSemantics: json['excludeFromSemantics'] as bool? ?? false,
+  excludeFromSemantics: json['excludeFromSemantics'] as bool?,
   color: json['color'] as String?,
-  blendMode:
-      $enumDecodeNullable(_$StacBlendModeEnumMap, json['blendMode']) ??
-      StacBlendMode.srcIn,
+  blendMode: $enumDecodeNullable(_$StacBlendModeEnumMap, json['blendMode']),
 );
 
 Map<String, dynamic> _$StacSvgToJson(StacSvg instance) => <String, dynamic>{
   'src': instance.src,
-  'sourceType': _$StacSvgSourceTypeEnumMap[instance.sourceType]!,
-  'width': instance.width,
-  'height': instance.height,
-  'fit': _$StacBoxFitEnumMap[instance.fit]!,
-  'alignment': _$StacAlignmentEnumMap[instance.alignment]!,
-  'matchTextDirection': instance.matchTextDirection,
-  'allowDrawingOutsideViewBox': instance.allowDrawingOutsideViewBox,
-  'placeholder': instance.placeholder,
-  'semanticsLabel': instance.semanticsLabel,
-  'excludeFromSemantics': instance.excludeFromSemantics,
-  'color': instance.color,
-  'blendMode': _$StacBlendModeEnumMap[instance.blendMode]!,
+  'sourceType': ?_$StacSvgSourceTypeEnumMap[instance.sourceType],
+  'width': ?instance.width,
+  'height': ?instance.height,
+  'fit': ?_$StacBoxFitEnumMap[instance.fit],
+  'alignment': ?_$StacAlignmentEnumMap[instance.alignment],
+  'matchTextDirection': ?instance.matchTextDirection,
+  'allowDrawingOutsideViewBox': ?instance.allowDrawingOutsideViewBox,
+  'placeholder': ?instance.placeholder,
+  'semanticsLabel': ?instance.semanticsLabel,
+  'excludeFromSemantics': ?instance.excludeFromSemantics,
+  'color': ?instance.color,
+  'blendMode': ?_$StacBlendModeEnumMap[instance.blendMode],
   'type': instance.type,
 };
 

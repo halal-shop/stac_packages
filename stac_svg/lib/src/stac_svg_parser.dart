@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stac/stac.dart';
 import 'stac_svg.dart';
 
-/// StacSvgWidgetParser is the [StacParser] implementation for [StacSvg].
+/// StacSvgParser is the [StacParser] implementation for [StacSvg].
 /// It handles the creation of [SvgPicture] from the model properties.
 class StacSvgParser extends StacParser<StacSvg> {
   @override
@@ -20,21 +20,21 @@ class StacSvgParser extends StacParser<StacSvg> {
           model.src,
           width: model.width,
           height: model.height,
-          fit: model.fit.parse,
-          alignment: model.alignment.parse,
-          matchTextDirection: model.matchTextDirection,
-          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox,
+          fit: model.fit?.parse ?? BoxFit.contain,
+          alignment: model.alignment?.parse ?? Alignment.center,
+          matchTextDirection: model.matchTextDirection ?? false,
+          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox ?? false,
           placeholderBuilder: model.placeholder != null
               ? (context) =>
                     Stac.fromJson(model.placeholder!.toJson(), context) ??
                     const SizedBox.shrink()
               : null,
           semanticsLabel: model.semanticsLabel,
-          excludeFromSemantics: model.excludeFromSemantics,
+          excludeFromSemantics: model.excludeFromSemantics ?? false,
           colorFilter: model.color != null
               ? ColorFilter.mode(
                   model.color!.toColor(context)!,
-                  model.blendMode.parse,
+                  model.blendMode?.parse ?? BlendMode.srcIn,
                 )
               : null,
         );
@@ -43,44 +43,44 @@ class StacSvgParser extends StacParser<StacSvg> {
           model.src,
           width: model.width,
           height: model.height,
-          fit: model.fit.parse,
-          alignment: model.alignment.parse,
-          matchTextDirection: model.matchTextDirection,
-          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox,
+          fit: model.fit?.parse ?? BoxFit.contain,
+          alignment: model.alignment?.parse ?? Alignment.center,
+          matchTextDirection: model.matchTextDirection ?? false,
+          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox ?? false,
           placeholderBuilder: model.placeholder != null
               ? (context) =>
                     Stac.fromJson(model.placeholder!.toJson(), context) ??
                     const SizedBox.shrink()
               : null,
           semanticsLabel: model.semanticsLabel,
-          excludeFromSemantics: model.excludeFromSemantics,
+          excludeFromSemantics: model.excludeFromSemantics ?? false,
           colorFilter: model.color != null
               ? ColorFilter.mode(
                   model.color!.toColor(context)!,
-                  model.blendMode.parse,
+                  model.blendMode?.parse ?? BlendMode.srcIn,
                 )
               : null,
         );
-      case StacSvgSourceType.string:
+      default:
         return SvgPicture.string(
           model.src,
           width: model.width,
           height: model.height,
-          fit: model.fit.parse,
-          alignment: model.alignment.parse,
-          matchTextDirection: model.matchTextDirection,
-          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox,
+          fit: model.fit?.parse ?? BoxFit.contain,
+          alignment: model.alignment?.parse ?? Alignment.center,
+          matchTextDirection: model.matchTextDirection ?? false,
+          allowDrawingOutsideViewBox: model.allowDrawingOutsideViewBox ?? false,
           placeholderBuilder: model.placeholder != null
               ? (context) =>
                     Stac.fromJson(model.placeholder!.toJson(), context) ??
                     const SizedBox.shrink()
               : null,
           semanticsLabel: model.semanticsLabel,
-          excludeFromSemantics: model.excludeFromSemantics,
+          excludeFromSemantics: model.excludeFromSemantics ?? false,
           colorFilter: model.color != null
               ? ColorFilter.mode(
                   model.color!.toColor(context)!,
-                  model.blendMode.parse,
+                  model.blendMode?.parse ?? BlendMode.srcIn,
                 )
               : null,
         );

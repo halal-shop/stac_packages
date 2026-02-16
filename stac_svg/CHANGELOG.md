@@ -1,3 +1,12 @@
+## 0.0.2
+
+* Improved package documentation for better pub.dev score.
+* Added a comprehensive example project.
+* Refined `pubspec.yaml` with better description and repository URLs.
+* Optimized JSON output by removing default/null values (reduced JSON size).
+* Made `StacSvg` properties nullable with defaults handled at parse time.
+* Improved `stac build` compatibility.
+
 ## 0.0.1
 
 * Initial release of `stac_svg`.

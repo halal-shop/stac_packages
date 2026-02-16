@@ -1,8 +1,9 @@
 name: stac_svg
-description: Stac widget to render svgs using flutter_svg
-version: 0.0.1
+description: A Stac widget parser for rendering SVG images in Flutter using the flutter_svg package, enabling server-driven SVG layouts.
+version: 0.0.2
 homepage: https://github.com/halal-shop/stac_packages
-repository: https://github.com/halal-shop/stac_packages/stac_svg
+repository: https://github.com/halal-shop/stac_packages
+issue_tracker: https://github.com/halal-shop/stac_packages/issues
 
 # This package supports only platforms listed below.
 platforms:
