@@ -1,5 +1,5 @@
 name: stac_svg
-description: Stac widget to render svgs using flutter_svgs
+description: Stac widget to render svgs using flutter_svg
 version: 0.0.1
 homepage: https://github.com/halal-shop/stac_packages
 repository: https://github.com/halal-shop/stac_packages/stac_svg
@@ -22,8 +22,8 @@ topics:
   - svg
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=3.8.0 <4.0.0"
+  flutter: ">=3.24.0"
 
 dependencies:
   flutter:
