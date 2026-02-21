@@ -1,6 +1,6 @@
-name: stac_svg
-description: A Stac widget parser for rendering SVG images in Flutter using the flutter_svg package, enabling server-driven SVG layouts.
-version: 0.0.3
+name: {{name.snakeCase()}}
+description: Some description
+version: 0.0.1
 homepage: https://github.com/halal-shop/stac_packages
 repository: https://github.com/halal-shop/stac_packages
 issue_tracker: https://github.com/halal-shop/stac_packages/issues
@@ -19,7 +19,6 @@ topics:
   - widget
   - server-driven-ui
   - dynamic-widgets
-  - flutter-svg
 
 environment:
   sdk: ">=3.8.0 <4.0.0"
@@ -32,7 +31,6 @@ dependencies:
   stac: ^1.3.1
   stac_core: ^1.3.0
   stac_framework: ^1.0.0
-  flutter_svg: ^2.0.10
   json_annotation: ^4.9.0
 
 dev_dependencies:

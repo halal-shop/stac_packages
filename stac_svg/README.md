@@ -11,7 +11,7 @@ Add this package to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  stac_svg: ^0.0.1
+  stac_svg: ^0.0.3
 ```
 
 or run this command:

@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Improved the docs
+
 ## 0.0.2
 
 * Improved package documentation for better pub.dev score.
